@@ -9,8 +9,10 @@ begin
 npm install -g typescript
 
 # Then run the compiler via tsc in target directory
-npx tsc basic/*.tsx;
+npx tsc 1-basic/*.ts;
+# or compile all 
+npx tsc */*.ts
 
 # then run the desired program
-node basic/index.js 
+node 1-basic/index.js
 ```
