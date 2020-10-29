@@ -30,3 +30,15 @@ var arr = [1, 2, 5, 7, 8];
 // it product a compile error
 // arr[0] = 4;
 console.log(arr);
+var typedFunction = function (a1, b2) { return true; };
+var Duck = /** @class */ (function () {
+    function Duck() {
+    }
+    Duck.prototype.quark = function () {
+        console.log(this.mote, this.mote, this.mote);
+    };
+    return Duck;
+}());
+var duck = new Duck();
+duck.mote = "bla";
+duck.quark();

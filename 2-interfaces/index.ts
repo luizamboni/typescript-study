@@ -84,3 +84,21 @@ const typedFunction : TypeFuncion = (a1: string, b2: number) => true;
 
 // fail
 // const typedFunction : TypeFuncion = (a1: number, b2: number) => true;
+
+
+// class interfaces
+interface Quarkable {
+    mote: string;
+    quark: () => void;
+}
+
+class Duck implements Quarkable {
+    mote: string;
+    quark() {
+        console.log(this.mote, this.mote, this.mote)
+    }
+}
+
+const duck = new Duck();
+duck.mote = "bla"
+duck.quark();
